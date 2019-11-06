@@ -1,0 +1,19 @@
+header {
+  height: 400px;
+  width: 100%;
+  background-color: #e89300;
+  background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  top: 40%;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+}

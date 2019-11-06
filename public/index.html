@@ -7,14 +7,23 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
+    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap" rel="stylesheet">
+
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-    <!-- External JS -->
-    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <!-- Nav CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
+    <!-- Header CSS -->
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+
+    <!-- Tweets CSS -->
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+    
+    <!-- Form CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+       
   </head>
 
   <body>
@@ -23,7 +32,66 @@
       <span>tweeter</span>
     </nav>
 
+    <header>
+      <div>
+          <img src="/images/profile-hex.png"> 
+      </div>
+      <br>
+      <div>
+          <h2>Your Name</h2>
+      </div>
+    </header>
+
     <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <main class="container">
+      <section class="new-tweet">
+          <!-- <h2>Compose Tweet</h2> -->
+          <!-- <form id="new-tweet" method="POST" action="./tweets/"> -->
+          <form id="new-tweet">
+            <textarea name="text" placeholder="What are you humming about?"></textarea>
+            <input class="tweet-button" type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </form>
+        </section>
+        
+      <section class="tweets-container"></section>
+    </main>
   </body>
+
+  <!-- External JS -->
+  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+
+  <!-- Character Counter -->
+  <script type="text/javascript" src="/scripts/composer-char-counter.js">
+  </script>
+
+  <!-- AJAX POST request -->
+  <script>
+    $(function() {
+      $("#new-tweet").submit(function(event) {
+        event.preventDefault();
+        // $.ajax("./tweets", { method: "POST" })
+        //   .then(function(feedback) {
+        //     console.log("Success: ", feedback)
+        //   })
+
+        let theData = {
+          "tweet": $("textarea[name=text]").val()
+        }
+
+        $.ajax({
+          url: "/tweets",
+          type: "POST",
+          data: JSON.stringify(theData),
+          success: function(d) {
+            alert(d);
+          }
+        });
+      })
+    })
+  </script>
+
 </html>

@@ -1,0 +1,45 @@
+.tweet-header {
+  font-size: 22px;
+  font-weight: normal;
+  position: relative;
+  top: 5px;
+  left: 45px;
+  height: 10px;
+  background: transparent;
+}
+
+.tweet {
+  position: relative;
+  top: 50px;
+  height: 200px;
+  width: 90vw;
+  border: solid;
+  padding: 20px;
+}
+
+.handle {
+  display: none;
+  color: lightblue;
+}
+
+.tweet-content {
+  height: 10px;
+  padding-left: 7px;
+  padding-top: 25px;
+  font-weight: 400;
+}
+
+.tweet-footer{ 
+  position: relative;
+  top: 95px;
+  padding: 5px;
+  font-size: 16px;
+  border-top: solid;
+  border-spacing: 155px;
+}
+
+.tweet:hover {
+  box-shadow: 7px 7px lightblue;
+  font-weight: 500;
+  display: inline-block;
+}
