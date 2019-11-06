@@ -73,22 +73,13 @@
     $(function() {
       $("#new-tweet-form").submit(function(event) {
         event.preventDefault();
-        // $.ajax("./tweets", { method: "POST" })
-        //   .then(function(feedback) {
-        //     console.log("Success: ", feedback)
-        //   })
-
-        let theData = $(this).serialize()
+        let data = $(this).serialize()
 
         $.ajax({
-          url: "/tweets",
+          url: "./tweets",
           type: "POST",
-          data: theData,
-          success: function(d) {
-            alert(d);
-          },
-          dataType: "json",
-        });
+          data: data,
+        })
       })
     })
   </script>
