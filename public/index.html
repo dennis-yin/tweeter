@@ -47,7 +47,7 @@
       <section class="new-tweet">
           <!-- <h2>Compose Tweet</h2> -->
           <!-- <form id="new-tweet" method="POST" action="./tweets/"> -->
-          <form id="new-tweet">
+          <form id="new-tweet-form">
             <textarea name="text" placeholder="What are you humming about?"></textarea>
             <input class="tweet-button" type="submit" value="Tweet">
             <span class="counter">140</span>
@@ -71,24 +71,23 @@
   <!-- AJAX POST request -->
   <script>
     $(function() {
-      $("#new-tweet").submit(function(event) {
+      $("#new-tweet-form").submit(function(event) {
         event.preventDefault();
         // $.ajax("./tweets", { method: "POST" })
         //   .then(function(feedback) {
         //     console.log("Success: ", feedback)
         //   })
 
-        let theData = {
-          "tweet": $("textarea[name=text]").val()
-        }
+        let theData = $(this).serialize()
 
         $.ajax({
           url: "/tweets",
           type: "POST",
-          data: JSON.stringify(theData),
+          data: theData,
           success: function(d) {
             alert(d);
-          }
+          },
+          dataType: "json",
         });
       })
     })
