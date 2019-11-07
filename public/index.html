@@ -69,19 +69,36 @@
   </script>
 
   <!-- AJAX POST request -->
-  <script>
+  <!-- <script>
+
     $(function() {
+
       $("#new-tweet-form").submit(function(event) {
+        const client = require("./scripts/client.js");
+
         event.preventDefault();
         let data = $(this).serialize()
-
-        $.ajax({
-          url: "./tweets",
-          type: "POST",
-          data: data,
-        })
+        const text = data.split("=");
+        if (text[1] === "") {
+          alert("Enter a tweet");
+        } else if (text[1].length > 140) {
+          alert("Tweet is too long");
+        } else {
+          $.ajax({
+            url: "./tweets",
+            type: "POST",
+            data: data,
+            success: function() {
+              client.loadTweets();
+              alert("Yus")
+            },
+            error: function() {
+              alert("Noo")
+            }
+          })
+        }        
       })
     })
-  </script>
+  </script> -->
 
 </html>

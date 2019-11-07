@@ -27,8 +27,12 @@ $(document).ready(function() {
 
   const renderTweets = function(tweets) {
     for (const tweet of tweets) {
-      $newTweet = createTweetElement(tweet);
-      $(".tweets-container").append($newTweet);
+      if (tweet.content.text === "") {
+        alert("Tweet something");
+      } else {
+        $newTweet = createTweetElement(tweet);
+        $(".tweets-container").append($newTweet);  
+      }    
     }
   };
 
@@ -44,30 +48,25 @@ $(document).ready(function() {
 
   loadTweets();
 
-  // const data = [
-  //   {
-  //     "user": {
-  //       "name": "Newton",
-  //       "avatars": "https://i.imgur.com/73hZDYK.png"
-  //       ,
-  //       "handle": "@SirIsaac"
-  //     },
-  //     "content": {
-  //       "text": "If I have seen further it is by standing on the shoulders of giants"
-  //     },
-  //     "created_at": 1461116232227
-  //   },
-  //   {
-  //     "user": {
-  //       "name": "Descartes",
-  //       "avatars": "https://i.imgur.com/nlhLi3I.png",
-  //       "handle": "@rd" },
-  //     "content": {
-  //       "text": "Je pense , donc je suis"
-  //     },
-  //     "created_at": 1461113959088
-  //   }
-  // ]
-  
-  // renderTweets(data)  
+  $("#new-tweet-form").submit(function(event) {
+    event.preventDefault();
+    let data = $(this).serialize()
+    const text = data.split("=");
+    if (text[1] === "") {
+      alert("Enter a tweet");
+    } else if (text[1].length > 140) {
+      alert("Tweet is too long");
+    } else {
+      $.ajax({
+        url: "./tweets",
+        type: "POST",
+        data: data,
+        success: function() {
+          loadTweets();
+        },
+      })
+    }
+  })
 });
+
+// module.exports = { createTweetElement, renderTweets, loadTweets };
