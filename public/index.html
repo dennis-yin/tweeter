@@ -30,6 +30,9 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
+      <div>
+        <p>Write a new tweet</p>
+      </div>
     </nav>
 
     <header>
@@ -45,11 +48,11 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-          <!-- <h2>Compose Tweet</h2> -->
           <!-- <form id="new-tweet" method="POST" action="./tweets/"> -->
           <form id="new-tweet-form">
             <textarea name="text" placeholder="What are you humming about?"></textarea>
             <input class="tweet-button" type="submit" value="Tweet">
+            <label class="hidden"></label>
             <span class="counter">140</span>
           </form>
         </section>
@@ -67,38 +70,5 @@
   <!-- Character Counter -->
   <script type="text/javascript" src="/scripts/composer-char-counter.js">
   </script>
-
-  <!-- AJAX POST request -->
-  <!-- <script>
-
-    $(function() {
-
-      $("#new-tweet-form").submit(function(event) {
-        const client = require("./scripts/client.js");
-
-        event.preventDefault();
-        let data = $(this).serialize()
-        const text = data.split("=");
-        if (text[1] === "") {
-          alert("Enter a tweet");
-        } else if (text[1].length > 140) {
-          alert("Tweet is too long");
-        } else {
-          $.ajax({
-            url: "./tweets",
-            type: "POST",
-            data: data,
-            success: function() {
-              client.loadTweets();
-              alert("Yus")
-            },
-            error: function() {
-              alert("Noo")
-            }
-          })
-        }        
-      })
-    })
-  </script> -->
 
 </html>
