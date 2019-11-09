@@ -1,4 +1,11 @@
+#new-tweet-form {
+  position: absolute;
+  left: 5%;
+  top: 60%;
+}
+
 textarea {
+  position: relative;
   background-color: transparent;
   border: none;
   border-bottom: 3px solid black;
@@ -18,7 +25,24 @@ input[type=submit] {
 }
 
 .counter {
-  position: relative;
-  left: 94%;
-  top: 30%;
+  position: absolute;
+  left: 95%;
+  top: 16%;
+}
+
+@media only screen and (min-width: 1024px) {
+  #new-tweet-form {
+    position: absolute;
+    top: 25%;
+    left: 40%;
+  }
+
+  textarea {
+    width: 55vw;
+  }
+
+  .counter {
+    position: absolute;
+    top: 75px;
+  }
 }

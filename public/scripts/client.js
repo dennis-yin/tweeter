@@ -32,12 +32,8 @@ const escape =  function(str) {
 
 const renderTweets = function(tweets) {
   for (const tweet of tweets) {
-    if (tweet.content.text === "") {
-      alert("Tweet something");
-    } else {
-      $newTweet = createTweetElement(tweet);
-      $('.tweets-container').append($newTweet);  
-    }    
+    $newTweet = createTweetElement(tweet);
+    $('.tweets-container').append($newTweet);    
   }
 };
 

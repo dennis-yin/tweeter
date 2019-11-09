@@ -1,5 +1,7 @@
 nav {
-  background-color: #4056A1;
+  display: flex;
+  background-color: #e89300;
+  background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png");
   width: 100vw;
   z-index: 100;
   color: #FFFF;
@@ -9,4 +11,15 @@ nav {
 
 span {
   font-family: Bungee;
+}
+
+nav > .write-tweet {
+  margin-left: auto;
+  align-self: center;
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: #4056A1;
+  }
 }
