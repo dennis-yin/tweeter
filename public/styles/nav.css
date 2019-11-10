@@ -16,6 +16,8 @@ span {
 nav > .write-tweet {
   margin-left: auto;
   align-self: center;
+  position: relative;
+  bottom: 10px;
 }
 
 @media only screen and (min-width: 1024px) {

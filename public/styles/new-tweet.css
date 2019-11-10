@@ -1,18 +1,23 @@
 #new-tweet-form {
-  position: absolute;
+  display: flex;
+  flex-direction: column;
+  position: relative;
   left: 5%;
-  top: 60%;
+  top: 50px;
 }
 
-textarea {
+#new-tweet-form textarea {
   position: relative;
   background-color: transparent;
   border: none;
   border-bottom: 3px solid black;
   width: 90vw;
+  resize: none;
+  height: 50px;
+  padding: 0 2px;
 }
 
-input[type=submit] {
+#new-tweet-form input[type=submit] {
   background-color: #4056A1;
   color: #FFFF;
   font-family: 'Bungee', cursive;
@@ -20,14 +25,14 @@ input[type=submit] {
   padding: 4px 6px;
   cursor: pointer;
   position: absolute;
-  left: 2px;
-  top: 75px;
+  top: 70px;
 }
 
 .counter {
-  position: absolute;
-  left: 95%;
-  top: 16%;
+  align-self: flex-end;
+  position: relative;
+  right: 80px;
+  top: 16px;
 }
 
 @media only screen and (min-width: 1024px) {
