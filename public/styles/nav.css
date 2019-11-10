@@ -20,6 +20,15 @@ nav > .write-tweet {
   bottom: 10px;
 }
 
+nav p {
+  text-align: center;
+}
+
+.text {
+  position: relative;
+  top: 25px;
+}
+
 @media only screen and (min-width: 1024px) {
   nav {
     background-color: #4056A1;

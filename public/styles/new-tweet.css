@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  left: 5%;
-  top: 50px;
+  bottom: 50px;
+  /* left: 5%; */
+  /* top: 50px; */
 }
 
 #new-tweet-form textarea {
@@ -31,9 +32,10 @@
 .counter {
   align-self: flex-end;
   position: relative;
-  right: 80px;
-  top: 16px;
+  top: 18px;
+  left: 15px;
 }
+
 
 @media only screen and (min-width: 1024px) {
   #new-tweet-form {

@@ -5,22 +5,22 @@
  */
 
 const createTweetElement = function(tweet) {
-  const $tweet = $("<article>").addClass("tweet");
-  let html = `
+  const $tweet = $(`
+  <article class="tweet">
     <header class="tweet-header">
-      ${tweet.user.name}
-      ${tweet.user.handle}
+      <p>${tweet.user.name}</p>
+      <p>${tweet.user.handle}</p>
     </header>
-    <div class="tweet-content">
-      <p class="tweet-content">
-        ${escape(tweet.content.text)}
-      </p>
-    </div>
+
+    <p class="tweet-content">
+      ${escape(tweet.content.text)}
+    </p>
+
     <footer class="tweet-footer">
-      ${tweet.created_at} days ago
+      <p>${tweet.created_at} days ago</p>
     </footer>
-  `;
-  $tweet.append(html);
+  `);
+
   return $tweet;
 };
 
@@ -33,15 +33,14 @@ const escape =  function(str) {
 const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     $newTweet = createTweetElement(tweet);
-    $('.tweets-container').append($newTweet);    
+    $('.tweet-container').prepend($newTweet); 
   }
 };
 
-const loadTweets = function() {
-    $.ajax('./tweets', { method: 'GET' })
+const loadTweets = function(cb) {
+  $.ajax('/tweets', { method: 'GET' })
     .then(function(tweets) {
-      console.log('Success: ');
-      renderTweets(tweets);
+      cb(tweets);
     })
 };
 
@@ -49,9 +48,9 @@ const toggleNewTweet = function(element) {
   element.click(() => {
     const $newTweet = $('.new-tweet');
     if ($newTweet.hasClass('hidden')) {
-      $newTweet.slideDown('slow').toggleClass('hidden');
+      $newTweet.slideDown('fast').toggleClass('hidden');
     } else {
-      $newTweet.slideUp('slow').toggleClass('hidden');
+      $newTweet.slideUp('fast').toggleClass('hidden');
     }
   });
 };
@@ -60,37 +59,37 @@ const submitTweet = function() {
   $('#new-tweet-form').submit(function(event) {
     event.preventDefault();
 
-    const $emptyError = $('#new-tweet-form > .empty-error');
-    const $lengthError = $('#new-tweet-form > .length-error');
+    const $data = $(this).serialize();
+    const $userTextInput = $(this).children('text');
+    const $emptyError = $(this).children('empty-error')
+    const $lengthError = $(this).children('length-error');
   
-    let data = $(this).serialize()
-    const text = data.split("=");
-  
-    if (text[1] === "") {
+    if ($userTextInput === '') { 
       $emptyError.slideDown('slow').toggleClass('hidden');
-    } else if (text[1].length > 140) {
-      $lengthError.slideDown('slow').toggleClass('hidden');
-    } else {
-      if (!($emptyError.hasClass('hidden'))) {
-        $emptyError.slideUp('slow').toggleClass('hidden');
-      }
-      if (!($lengthError.hasClass('hidden'))) {
-        $lengthError.slideUp('slow').toggleClass('hidden');
-      }
-      $.ajax({
-        url: "./tweets",
-        type: "POST",
-        data: data,
-        success: function() {
-          loadTweets();
-        },
-      })
+      return;
     }
+
+    if ($userTextInput.length > 140) {
+      $lengthError.slideDown('slow').toggleClass('hidden');
+      return;
+    }
+
+    $.ajax({
+      url: "/tweets",
+      type: "POST",
+      data: $data,
+      success: function() {
+        $userTextInput.val('');
+        $('.counter').text('140');
+        $('.tweet-container').html(``);
+        loadTweets(renderTweets);
+      }
+    })
   })
 };
 
 $(document).ready(function() {
   submitTweet();
-  loadTweets();
+  loadTweets(renderTweets);
   toggleNewTweet($('nav > div'));
 });

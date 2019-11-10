@@ -21,10 +21,10 @@ body {
   font-size: 24px;
 }
 
-main {
+body > main {
   width: 90%;
-  position: absolute;
-  top: 1000px;
+  position: relative;
+  top: 100px;
   left: 0;
   right: 0;
   margin: auto;

@@ -33,35 +33,35 @@
     <nav>
       <span>tweeter</span>
       <div class="write-tweet">
-        <p>Write a new tweet</p>
+        <p class="text">Write a new tweet</p>
+        <p>⇓</p>
       </div>
     </nav>
 
     <header>
       <div class="profile-pic">
-          <img src="/images/profile-hex.png"> 
+        <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div class="full-name">
-          <h2>Dennis Yin</h2>
+        <h2>Dennis Yin</h2>
       </div>
     </header>
 
-    <section class="new-tweet">
-      <!-- <form id="new-tweet" method="POST" action="./tweets/"> -->
-      <form id="new-tweet-form">
-        <textarea name="text" placeholder="What are you humming about?"></textarea>
-        <input class="tweet-button" type="submit" value="Tweet">
-        <label class="hidden"></label>
-        <span class="counter">140</span>
-        <p class="empty-error" hidden>Error: Enter a tweet</p>
-        <p class="length-error" hidden>Error: Tweet too long</p>
-      </form>
-    </section>
-
-    <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="tweets-container"></section>
+      <section class="new-tweet">
+        <form id="new-tweet-form">
+          <textarea name="text" placeholder="What are you humming about?"></textarea>
+          <input class="tweet-button" type="submit" value="Tweet">
+          <label class="hidden"></label>
+          <span class="counter">140</span>
+          <p class="empty-error" hidden>Error: Enter a tweet</p>
+          <p class="length-error" hidden>Error: Tweet too long</p>
+        </form>
+      </section>
+
+      <section class="tweet-container">
+      </section>
     </main>
   </body>
 
