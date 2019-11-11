@@ -72,3 +72,27 @@
 .tweet:hover {
   box-shadow: 10px 10px 2px 1px #42aaf5;
 }
+
+@media only screen and (min-width: 1024px) {
+  .tweet-container {
+    width: 45vw;
+    position: relative;
+    left: 44%;
+    bottom: 430px;
+  }
+
+  .tweet-header {
+    position: relative;
+    top: 10px;
+  }
+
+  .tweet-header .username {
+    position: relative;
+    bottom: 10010px;
+  }
+
+  .tweet-footer {
+    position: relative;
+    bottom: 500px;
+  }
+}

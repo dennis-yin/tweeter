@@ -87,19 +87,22 @@ const submitTweet = function() {
     event.preventDefault();
 
     const $data = $(this).serialize();
-    const $userTextInput = $(this).find('textarea').val();
-    const $emptyError = $(this).find('p.empty-error')
-    const $lengthError = $(this).find('p.length-error');
+    const $userTextInput = $(this).find('textarea');
+    const $emptyError = $(this).parent().find('.empty-error')
+    const $lengthError = $(this).find('.length-error');
   
-    if ($emptyError.hasClass('hidden')) {
-      if ($userTextInput === '') { 
+    console.log($emptyError.is(':hidden'))
+    if ($emptyError.is(':hidden')) {
+      console.log("YEAH")
+      if ($userTextInput.val() === '') { 
+        console.log("UH HUH")
         $emptyError.slideDown('slow').toggleClass('hidden');
         return;
       }
     }
 
-    if ($lengthError.hasClass('hidden')) {
-      if ($userTextInput.length > 140) {
+    if ($lengthError.is(':hidden')) {
+      if ($userTextInput.val().length > 140) {
         $lengthError.slideDown('slow').toggleClass('hidden');
         return;
       }
@@ -110,10 +113,10 @@ const submitTweet = function() {
       type: "POST",
       data: $data,
       success: function() {
+        loadTweets(renderTweets);
         $userTextInput.val('');
         $('.counter').text('140');
         $('.tweet-container').html(``);
-        loadTweets(renderTweets);
       }
     });
   });

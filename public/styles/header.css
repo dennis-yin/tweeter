@@ -19,6 +19,7 @@ body > header h2 {
   body > header {
     width: 30%;
     position: relative;
+    top: 60px;
     margin: 75px;
   }
 }

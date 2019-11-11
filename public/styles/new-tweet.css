@@ -50,4 +50,9 @@
     top: 75px;
     left: 910px;
   }
+
+  p {
+    position: relative;
+    top: 30px;
+  }
 }
