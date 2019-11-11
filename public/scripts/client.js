@@ -42,6 +42,9 @@ const createTweetElement = function(tweet) {
     </p>
     <footer class="tweet-footer">
       <p class="date-created">${calculateTweetCreation(dateDiff)}</p>
+      <figure class="flag">⚑</figure>
+      <figure class="retweet">⟲</figure>
+      <figure class="heart">❤</figure>
     </footer>
   `);
 

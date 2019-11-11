@@ -29,7 +29,7 @@
   color: #42aaf5;
   position: relative;
   bottom: 130px;
-  left: 620px;
+  left: 630px;
 }
 
 .tweet .tweet-content {
@@ -49,6 +49,24 @@
   position: relative;
   bottom: 10px;
   left: 20px;
+}
+
+.tweet-footer .flag {
+  position: relative;
+  bottom: 45px;
+  left: 650px;
+}
+
+.tweet-footer .retweet {
+  position: relative;
+  bottom: 81px;
+  left: 670px;
+}
+
+.tweet-footer .heart {
+  position: relative;
+  bottom: 117px;
+  left: 690px;
 }
 
 .tweet:hover {
