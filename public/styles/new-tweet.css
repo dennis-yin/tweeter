@@ -3,8 +3,6 @@
   flex-direction: column;
   position: relative;
   bottom: 50px;
-  /* left: 5%; */
-  /* top: 50px; */
 }
 
 #new-tweet-form textarea {
@@ -36,20 +34,20 @@
   left: 15px;
 }
 
-
 @media only screen and (min-width: 1024px) {
   #new-tweet-form {
-    position: absolute;
-    top: 25%;
-    left: 40%;
+    position: relative;
+    left: 700px;
+    bottom: 570px;
   }
 
-  textarea {
-    width: 55vw;
+  #new-tweet-form textarea {
+    width: 50vw;
   }
 
   .counter {
     position: absolute;
     top: 75px;
+    left: 910px;
   }
 }

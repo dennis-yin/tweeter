@@ -87,18 +87,22 @@ const submitTweet = function() {
     event.preventDefault();
 
     const $data = $(this).serialize();
-    const $userTextInput = $(this).children('text');
-    const $emptyError = $(this).children('empty-error')
-    const $lengthError = $(this).children('length-error');
+    const $userTextInput = $(this).find('textarea').val();
+    const $emptyError = $(this).find('p.empty-error')
+    const $lengthError = $(this).find('p.length-error');
   
-    if ($userTextInput === '') { 
-      $emptyError.slideDown('slow').toggleClass('hidden');
-      return;
+    if ($emptyError.hasClass('hidden')) {
+      if ($userTextInput === '') { 
+        $emptyError.slideDown('slow').toggleClass('hidden');
+        return;
+      }
     }
 
-    if ($userTextInput.length > 140) {
-      $lengthError.slideDown('slow').toggleClass('hidden');
-      return;
+    if ($lengthError.hasClass('hidden')) {
+      if ($userTextInput.length > 140) {
+        $lengthError.slideDown('slow').toggleClass('hidden');
+        return;
+      }
     }
 
     $.ajax({
@@ -118,5 +122,5 @@ const submitTweet = function() {
 $(document).ready(function() {
   submitTweet();
   loadTweets(renderTweets);
-  toggleNewTweet($('.nav > div'));
+  toggleNewTweet($('.write-tweet'));
 });

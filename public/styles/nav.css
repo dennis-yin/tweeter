@@ -2,7 +2,6 @@ nav {
   display: flex;
   background-color: #002970;
   background-image: url("https://www.transparenttextures.com/patterns/white-wall-3-2.png");
-  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
   width: 100vw;
   z-index: 100;
   color: #FFFF;
@@ -15,6 +14,7 @@ span {
 }
 
 nav > .write-tweet {
+  cursor: pointer;
   margin-left: auto;
   align-self: center;
   position: relative;
