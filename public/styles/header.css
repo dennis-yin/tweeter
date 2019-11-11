@@ -1,4 +1,4 @@
-header {
+body > header {
   display: flex;
   flex-direction: column;
   height: 400px;
@@ -10,7 +10,7 @@ header {
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
-header h2 {
+body > header h2 {
   color: white;
   position: relative;
   bottom: 35px;

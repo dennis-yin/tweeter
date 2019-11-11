@@ -28,7 +28,7 @@ const escape =  function(str) {
   let div = document.createElement('div');
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
-}
+};
 
 const renderTweets = function(tweets) {
   for (const tweet of tweets) {
@@ -84,12 +84,12 @@ const submitTweet = function() {
         $('.tweet-container').html(``);
         loadTweets(renderTweets);
       }
-    })
-  })
+    });
+  });
 };
 
 $(document).ready(function() {
   submitTweet();
   loadTweets(renderTweets);
-  toggleNewTweet($('nav > div'));
+  toggleNewTweet($('.nav > div'));
 });
