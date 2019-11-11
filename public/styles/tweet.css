@@ -9,10 +9,48 @@
   left: 8px;
   padding: 20px;
   border-style: solid;
+  border-width: 5px;
   margin: 15px;
+  height: 250px;
+}
+
+.tweet-header img {
+  max-width: 8%;
+  height: auto;
+}
+
+.tweet-header .username {
+  position: relative;
+  left: 70px;
+  bottom: 70px;
+}
+
+.tweet-header .handle {
+  color: #42aaf5;
+  position: relative;
+  bottom: 130px;
+  left: 620px;
+}
+
+.tweet .tweet-content {
+  position: relative;
+  left: 20px;
+  bottom: 115px;
+}
+
+.tweet .tweet-footer {
+  position: relative;
+  bottom: 80px;
+  font-size: 16px;
+  border-top: 5px solid;
+}
+
+.tweet-footer .date-created {
+  position: relative;
+  bottom: 10px;
+  left: 20px;
 }
 
 .tweet:hover {
   box-shadow: 10px 10px 2px 1px #42aaf5;
 }
-

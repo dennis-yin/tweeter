@@ -5,8 +5,8 @@ body > header {
   width: 100vw;
   justify-content: center;
   align-items: center;
-  background-color: #e89300;
-  background-image: url("https://www.transparenttextures.com/patterns/notebook-dark.png");
+  background-color: #002970;
+  background-image: url("https://www.transparenttextures.com/patterns/white-wall-3-2.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
