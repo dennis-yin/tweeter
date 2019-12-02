@@ -21,6 +21,11 @@ nav > .write-tweet {
   bottom: 10px;
 }
 
+p.text {
+  position: relative;
+  top: 20px;
+}
+
 nav p {
   text-align: center;
 }

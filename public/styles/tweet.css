@@ -1,9 +1,3 @@
-/* .tweet-container {
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-} */
-
 .tweet {
   padding-left: 3%;
   padding-right: 3%;
@@ -13,35 +7,39 @@
   height: 250px;
 }
 
+.tweet-header {
+  padding-top: 2%;
+}
+
 .tweet-header img {
   max-width: 8%;
   height: auto;
 }
 
-.tweet-header .username {
+.username {
   position: relative;
   left: 70px;
   bottom: 70px;
 }
 
-.tweet-header .handle {
+.handle {
   color: #42aaf5;
-  position: absolute;
-  left: 75%;
-  bottom: 38%;
+  position: relative;
+  left: 80%;
+  bottom: 130px;
 }
 
 .tweet .tweet-content {
   position: relative;
   left: 20px;
-  bottom: 115px;
+  bottom: 170px;
   padding-top: 7%;
 }
 
 .tweet .tweet-footer {
   height: 20%;
   position: relative;
-  /* bottom: 20%; */
+  bottom: 56%;
   font-size: 16px;
   border-top: 5px solid;
 }
@@ -86,11 +84,17 @@
     top: 10px;
   }
 
-  /* .tweet-header .username {
-  } */
+  .tweet .tweet-content {
+    bottom: 55%;
+  }
 
-  .tweet-footer {
-    position: relative;
-    bottom: 30%;
+  .tweet .tweet-footer {
+    bottom: 35%;
+  }
+
+  .handle {
+    position: absolute;
+    left: 75%;
+    bottom: 38%;
   }
 }
