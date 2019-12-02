@@ -1,13 +1,12 @@
-.tweet-container {
+/* .tweet-container {
   display: flex;
   flex-direction: column;
   padding: 5px;
-}
+} */
 
 .tweet {
-  position: relative;
-  left: 8px;
-  padding: 20px;
+  padding-left: 3%;
+  padding-right: 3%;
   border-style: solid;
   border-width: 5px;
   margin: 15px;
@@ -27,20 +26,22 @@
 
 .tweet-header .handle {
   color: #42aaf5;
-  position: relative;
-  bottom: 130px;
-  left: 630px;
+  position: absolute;
+  left: 70%;
+  bottom: 38%;
 }
 
 .tweet .tweet-content {
   position: relative;
   left: 20px;
   bottom: 115px;
+  padding-top: 7%;
 }
 
 .tweet .tweet-footer {
+  height: 20%;
   position: relative;
-  bottom: 80px;
+  /* bottom: 20%; */
   font-size: 16px;
   border-top: 5px solid;
 }
@@ -52,21 +53,21 @@
 }
 
 .tweet-footer .flag {
-  position: relative;
-  bottom: 45px;
-  left: 650px;
+  position: absolute;
+  bottom: 5%;
+  left: 85%;
 }
 
 .tweet-footer .retweet {
-  position: relative;
-  bottom: 81px;
-  left: 670px;
+  position: absolute;
+  bottom: 5%;
+  left: 88%;
 }
 
 .tweet-footer .heart {
-  position: relative;
-  bottom: 117px;
-  left: 690px;
+  position: absolute;
+  bottom: 5%;
+  left: 91%;
 }
 
 .tweet:hover {
@@ -75,10 +76,8 @@
 
 @media only screen and (min-width: 1024px) {
   .tweet-container {
-    width: 45vw;
-    position: relative;
-    left: 44%;
-    bottom: 430px;
+    padding-left: 40%;
+    width: 75vw;
   }
 
   .tweet-header {
@@ -86,13 +85,11 @@
     top: 10px;
   }
 
-  .tweet-header .username {
-    position: relative;
-    bottom: 10010px;
-  }
+  /* .tweet-header .username {
+  } */
 
   .tweet-footer {
     position: relative;
-    bottom: 500px;
+    bottom: 30%;
   }
 }

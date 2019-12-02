@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -15,6 +17,9 @@ html {
  */
 
 body {
+  /* display: flex;
+  flex-direction: column; */
+  /* flex-wrap: wrap; */
   color: #545149;
   background-color: #f4f1ec;
   font-family: "Source Sans Pro", sans-serif;
@@ -22,20 +27,22 @@ body {
 }
 
 body > main {
-  width: 90%;
+  padding-left: 250px;
+  /* flex-wrap: wrap;
+  flex: 50%; */
+  /* width: 50vw;
   position: relative;
   top: 100px;
   left: 0;
   right: 0;
-  margin: auto;
+  margin: auto; */
 }
 
 @media only screen and (min-width: 1024px) {
-  main {
-    position: relative;
-    /* width: 50px; */
-    left: 610px;
-    top: 37%;
+  body > main {
+    width: 70%;
+    margin: 75px;
+    top: 20%;
   }
 }
 /*

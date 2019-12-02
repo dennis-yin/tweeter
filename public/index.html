@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
 
     <!-- Meta Information -->
     <title>Tweeter - Home Page</title>
@@ -9,7 +12,10 @@
     <!-- External CSS -->
     <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
-    <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -22,10 +28,9 @@
 
     <!-- Tweets CSS -->
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
-    
+
     <!-- Form CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-       
   </head>
 
   <body>
@@ -34,15 +39,15 @@
       <span>tweeter</span>
       <div class="write-tweet">
         <p class="text">Write a new tweet</p>
-        <p>⇓</p>
+        <p class="arrow">⇓</p>
       </div>
     </nav>
 
     <header>
       <div class="profile-pic">
-        <img src="/images/profile-hex.png"> 
+        <img src="/images/profile-hex.png" />
       </div>
-      <br>
+      <br />
       <div class="full-name">
         <h2>Dennis Yin</h2>
       </div>
@@ -51,8 +56,11 @@
     <main class="container">
       <section class="new-tweet" hidden>
         <form id="new-tweet-form">
-          <textarea name="text" placeholder="What are you humming about?"></textarea>
-          <input class="tweet-button" type="submit" value="Tweet">
+          <textarea
+            name="text"
+            placeholder="What are you humming about?"
+          ></textarea>
+          <input class="tweet-button" type="submit" value="Tweet" />
           <label class="hidden"></label>
           <span class="counter">140</span>
           <p class="empty-error" hidden>Error: Enter a tweet</p>
@@ -60,8 +68,7 @@
         </form>
       </section>
 
-      <section class="tweet-container">
-      </section>
+      <section class="tweet-container"></section>
     </main>
   </body>
 
@@ -72,7 +79,8 @@
   <script type="text/javascript" src="/scripts/client.js"></script>
 
   <!-- Character Counter -->
-  <script type="text/javascript" src="/scripts/composer-char-counter.js">
-  </script>
-
+  <script
+    type="text/javascript"
+    src="/scripts/composer-char-counter.js"
+  ></script>
 </html>

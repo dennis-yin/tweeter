@@ -1,12 +1,21 @@
 body > header {
-  display: flex;
-  flex-direction: column;
-  height: 400px;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
+  /* flex: 50%; */
+  /* height: 100vw; */
+  /* width: 50vw; */
+  /* justify-content: center;
+  align-items: center; */
+  top: 100px;
+  left: 0px;
+  width: 500px;
+  position: absolute;
   background-color: #002970;
   background-image: url("https://www.transparenttextures.com/patterns/white-wall-3-2.png");
+}
+
+.profile-pic > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 body > header h2 {
@@ -15,11 +24,15 @@ body > header h2 {
   bottom: 35px;
 }
 
+.full-name {
+  text-align: center;
+}
+
 @media only screen and (min-width: 1024px) {
   body > header {
     width: 30%;
-    position: relative;
-    top: 60px;
+    position: absolute;
+    top: 20%;
     margin: 75px;
   }
 }

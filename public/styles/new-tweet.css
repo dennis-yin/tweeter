@@ -1,6 +1,4 @@
 #new-tweet-form {
-  display: flex;
-  flex-direction: column;
   position: relative;
   bottom: 50px;
 }
@@ -16,10 +14,10 @@
   padding: 0 2px;
 }
 
-#new-tweet-form input[type=submit] {
-  background-color: #4056A1;
-  color: #FFFF;
-  font-family: 'Bungee', cursive;
+#new-tweet-form input[type="submit"] {
+  background-color: #4056a1;
+  color: #ffff;
+  font-family: "Bungee", cursive;
   font-size: 20px;
   padding: 4px 6px;
   cursor: pointer;
@@ -51,7 +49,7 @@
     left: 910px;
   }
 
-  p {
+  p.text {
     position: relative;
     top: 30px;
   }
