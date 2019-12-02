@@ -27,19 +27,13 @@ body {
 }
 
 body > main {
-  padding-left: 250px;
-  /* flex-wrap: wrap;
-  flex: 50%; */
-  /* width: 50vw;
-  position: relative;
-  top: 100px;
-  left: 0;
-  right: 0;
-  margin: auto; */
+  padding-top: 450px;
 }
 
 @media only screen and (min-width: 1024px) {
   body > main {
+    padding-top: 0px;
+    padding-left: 250px;
     width: 70%;
     margin: 75px;
     top: 20%;

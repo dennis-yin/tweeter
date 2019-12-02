@@ -1,12 +1,5 @@
 body > header {
-  /* flex: 50%; */
-  /* height: 100vw; */
-  /* width: 50vw; */
-  /* justify-content: center;
-  align-items: center; */
-  top: 100px;
-  left: 0px;
-  width: 500px;
+  width: 100%;
   position: absolute;
   background-color: #002970;
   background-image: url("https://www.transparenttextures.com/patterns/white-wall-3-2.png");
@@ -30,7 +23,7 @@ body > header h2 {
 
 @media only screen and (min-width: 1024px) {
   body > header {
-    width: 30%;
+    width: 500px;
     position: absolute;
     top: 20%;
     margin: 75px;

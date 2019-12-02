@@ -2,7 +2,7 @@ nav {
   display: flex;
   background-color: #002970;
   background-image: url("https://www.transparenttextures.com/patterns/white-wall-3-2.png");
-  width: 100vw;
+  width: 100%;
   z-index: 100;
   color: #ffff;
   height: 120px;

@@ -27,7 +27,7 @@
 .tweet-header .handle {
   color: #42aaf5;
   position: absolute;
-  left: 70%;
+  left: 75%;
   bottom: 38%;
 }
 
@@ -76,6 +76,7 @@
 
 @media only screen and (min-width: 1024px) {
   .tweet-container {
+    position: relative;
     padding-left: 40%;
     width: 75vw;
   }

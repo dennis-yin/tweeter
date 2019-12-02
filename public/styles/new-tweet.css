@@ -1,6 +1,6 @@
 #new-tweet-form {
-  position: relative;
-  bottom: 50px;
+  /* position: relative;
+  bottom: 50px; */
 }
 
 #new-tweet-form textarea {
@@ -12,6 +12,7 @@
   resize: none;
   height: 60px;
   padding: 0 2px;
+  outline: none;
 }
 
 #new-tweet-form input[type="submit"] {
@@ -32,11 +33,23 @@
   left: 15px;
 }
 
+.hidden {
+  display: none;
+}
+
+.empty-error,
+.length-error {
+  padding-top: 10%;
+}
+
 @media only screen and (min-width: 1024px) {
+  .new-tweet {
+    padding-left: 42%;
+  }
+
   #new-tweet-form {
     position: relative;
-    left: 700px;
-    bottom: 570px;
+    bottom: 50px;
   }
 
   #new-tweet-form textarea {
