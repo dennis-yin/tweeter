@@ -23,9 +23,8 @@ body > header h2 {
 
 @media only screen and (min-width: 1024px) {
   body > header {
-    width: 500px;
-    position: absolute;
-    top: 20%;
-    margin: 75px;
+    width: 30%;
+    margin-left: 5%;
+    margin-top: 4%;
   }
 }

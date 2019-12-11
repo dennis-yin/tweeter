@@ -57,12 +57,13 @@
       <section class="new-tweet hidden">
         <form id="new-tweet-form">
           <textarea
+            id="tweet-box"
             name="text"
             placeholder="What are you humming about?"
           ></textarea>
           <input class="tweet-button" type="submit" value="Tweet" />
           <label class="hidden"></label>
-          <span class="counter">140</span>
+          <span id="counter" class="counter">140</span>
           <p class="empty-error hidden">Error: Enter a tweet</p>
           <p class="length-error hidden">Error: Tweet too long</p>
         </form>

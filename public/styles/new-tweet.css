@@ -1,13 +1,9 @@
-.new-tweet {
-  padding-left: 4%;
-}
-
 #new-tweet-form textarea {
   position: relative;
   background-color: transparent;
   border: none;
-  border-bottom: 3px solid black;
-  width: 90vw;
+  border-bottom: 3px solid #545159;
+  width: 100%;
   resize: none;
   height: 60px;
   padding: 0 2px;
@@ -24,7 +20,7 @@
 }
 
 .counter {
-  padding-left: 80%;
+  /* padding-left: 80%; */
 }
 
 .hidden {
@@ -33,27 +29,22 @@
 
 .empty-error,
 .length-error {
-  padding-top: 10%;
 }
 
 @media only screen and (min-width: 1024px) {
-  .new-tweet {
-    padding-left: 42%;
-  }
-
   #new-tweet-form {
-    position: relative;
-    bottom: 50px;
   }
 
   #new-tweet-form textarea {
-    width: 50vw;
   }
 
   .counter {
-    padding: 0px;
-    position: absolute;
-    top: 75px;
-    left: 910px;
+    position: relative;
+    left: 83%;
+  }
+
+  .new-tweet {
+    padding-left: 2%;
+    width: 98%;
   }
 }

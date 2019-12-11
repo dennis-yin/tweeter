@@ -34,6 +34,7 @@
   left: 20px;
   bottom: 170px;
   padding-top: 7%;
+  overflow-wrap: break-word;
 }
 
 .tweet .tweet-footer {
@@ -73,12 +74,6 @@
 }
 
 @media only screen and (min-width: 1024px) {
-  .tweet-container {
-    position: relative;
-    padding-left: 40%;
-    width: 75vw;
-  }
-
   .tweet-header {
     position: relative;
     top: 10px;
