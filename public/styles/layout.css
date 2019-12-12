@@ -17,9 +17,6 @@ html {
  */
 
 body {
-  /* display: flex;
-  flex-direction: column; */
-  /* flex-wrap: wrap; */
   color: #545149;
   background-color: #f4f1ec;
   font-family: "Source Sans Pro", sans-serif;
@@ -27,15 +24,16 @@ body {
 }
 
 body > main {
+  padding-top: 45%;
+  padding-left: 5%;
+  width: 95%;
 }
 
 @media only screen and (min-width: 1024px) {
   body > main {
+    padding-top: 0%;
     padding-left: 45%;
     width: 90%;
     margin-top: 4%;
   }
 }
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */

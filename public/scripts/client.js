@@ -85,9 +85,7 @@ const submitTweet = function() {
 
     const $data = $(this).serialize();
     const $userTextInput = $(this).find("textarea");
-    const $emptyError = $(this)
-      .parent()
-      .find(".empty-error");
+    const $emptyError = $(this).find(".empty-error");
     const $lengthError = $(this).find(".length-error");
 
     if ($emptyError.is(":hidden")) {

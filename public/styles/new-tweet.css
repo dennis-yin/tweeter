@@ -20,29 +20,15 @@
 }
 
 .counter {
-  /* padding-left: 80%; */
+  position: relative;
+  left: 83%;
 }
 
 .hidden {
   display: none;
 }
 
-.empty-error,
-.length-error {
-}
-
 @media only screen and (min-width: 1024px) {
-  #new-tweet-form {
-  }
-
-  #new-tweet-form textarea {
-  }
-
-  .counter {
-    position: relative;
-    left: 83%;
-  }
-
   .new-tweet {
     padding-left: 2%;
     width: 98%;
