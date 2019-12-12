@@ -52,6 +52,7 @@ const escape = function(str) {
 };
 
 const renderTweets = function(tweets) {
+  $(".tweet-container").empty();
   for (const tweet of tweets) {
     $newTweet = createTweetElement(tweet);
     $(".tweet-container").prepend($newTweet);
@@ -120,7 +121,6 @@ const submitTweet = function() {
         loadTweets(renderTweets);
         $userTextInput.val("");
         $(".counter").text("140");
-        $(".tweet-container").html(``);
       }
     });
   });

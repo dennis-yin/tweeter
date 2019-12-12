@@ -27,4 +27,8 @@ body > header h2 {
     margin-left: 5%;
     margin-top: 4%;
   }
+
+  .profile-pic > img {
+    padding-top: 10%;
+  }
 }

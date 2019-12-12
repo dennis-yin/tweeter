@@ -1,3 +1,7 @@
+#new-tweet-form {
+  position: relative;
+}
+
 #new-tweet-form textarea {
   position: relative;
   background-color: transparent;
@@ -20,8 +24,8 @@
 }
 
 .counter {
-  position: relative;
-  left: 83%;
+  position: absolute;
+  right: 0;
 }
 
 .hidden {
