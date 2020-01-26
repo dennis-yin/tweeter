@@ -1,87 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-    />
 
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <link
-      href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap"
-      rel="stylesheet"
-    />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Bungee|Source+Sans+Pro:300,300i,700,700i&display=swap"
+    rel="stylesheet" />
 
-    <!-- Nav CSS -->
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-    <!-- Header CSS -->
-    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+  <!-- Nav CSS -->
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
-    <!-- Tweets CSS -->
-    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+  <!-- Header CSS -->
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
-    <!-- Form CSS -->
-    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
-  </head>
+  <!-- Tweets CSS -->
+  <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
-      <div class="write-tweet">
-        <p class="text">Write a new tweet</p>
-        <p class="arrow">⇓</p>
-      </div>
-    </nav>
+  <!-- Form CSS -->
+  <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+</head>
 
-    <header>
-      <div class="profile-pic">
-        <img src="/images/profile-hex.png" />
-      </div>
-      <br />
-      <div class="full-name">
-        <h2>Dennis Yin</h2>
-      </div>
-    </header>
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav>
+    <span>tweeter</span>
+    <div class="write-tweet">
+      <p class="text">Write a new tweet</p>
+      <p class="arrow">⇓</p>
+    </div>
+  </nav>
 
-    <main class="container">
-      <section class="new-tweet hidden">
-        <form id="new-tweet-form">
-          <textarea
-            id="tweet-box"
-            name="text"
-            placeholder="What are you humming about?"
-          ></textarea>
-          <input class="tweet-button" type="submit" value="Tweet" />
-          <label class="hidden"></label>
-          <span id="counter" class="counter">140</span>
-          <p class="empty-error hidden">Error: Enter a tweet</p>
-          <p class="length-error hidden">Error: Tweet too long</p>
-        </form>
-      </section>
+  <header>
+    <div class="profile-pic">
+      <img src="/images/profile-hex.png" />
+    </div>
+    <br />
+    <div class="full-name">
+      <h2>Dennis Yin</h2>
+    </div>
+  </header>
 
-      <section class="tweet-container"></section>
-    </main>
-  </body>
+  <main class="container">
+    <section class="new-tweet hidden">
+      <form id="new-tweet-form">
+        <textarea id="tweet-box" name="text" placeholder="What are you humming about?"></textarea>
+        <input class="tweet-button" type="submit" value="Tweet" />
+        <label class="hidden"></label>
+        <span id="counter" class="counter">140</span>
+        <p class="empty-error hidden">Error: Enter a tweet</p>
+        <p class="length-error hidden">Error: Tweet too long</p>
+      </form>
+    </section>
 
-  <!-- External JS -->
-  <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+    <section class="tweet-container"></section>
+  </main>
+</body>
 
-  <!-- App JS -->
-  <script type="text/javascript" src="/scripts/client.js"></script>
+<!-- External JS -->
+<script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
 
-  <!-- Character Counter -->
-  <script
-    type="text/javascript"
-    src="/scripts/composer-char-counter.js"
-  ></script>
+<!-- App JS -->
+<script type="text/javascript" src="/scripts/client.js"></script>
+
+<!-- Character Counter -->
+<script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+
 </html>

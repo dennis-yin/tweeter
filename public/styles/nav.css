@@ -13,7 +13,7 @@ span {
   font-family: Bungee;
 }
 
-nav > .write-tweet {
+nav>.write-tweet {
   cursor: pointer;
   margin-left: auto;
   align-self: center;

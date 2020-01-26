@@ -1,4 +1,4 @@
-const getCharsRemaining = function() {
+const getCharsRemaining = function () {
   const tweetBox = $("#tweet-box");
   const counter = $("#counter");
 
@@ -6,7 +6,7 @@ const getCharsRemaining = function() {
     counter.text(140 - tweetBox.val().length);
 
     counter.css({
-      color: function() {
+      color: function () {
         if (counter.text() < "0") {
           return "red";
         } else {

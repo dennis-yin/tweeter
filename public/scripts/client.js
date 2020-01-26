@@ -1,4 +1,4 @@
-const calculateTweetCreation = function(time) {
+const calculateTweetCreation = function (time) {
   time /= 1000; // Convert milliseconds to seconds
 
   if (time < 60) {
@@ -19,7 +19,7 @@ const calculateTweetCreation = function(time) {
   return Math.floor(time / 31104000) + " years ago";
 };
 
-const createTweetElement = function(tweet) {
+const createTweetElement = function (tweet) {
   const currDate = Date.now();
   const dateCreated = new Date(tweet.created_at).getTime();
   const dateDiff = currDate - dateCreated;
@@ -45,13 +45,14 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
-const escape = function(str) {
+// Function to prevent XSS attacks
+const escape = function (str) {
   let div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
 };
 
-const renderTweets = function(tweets) {
+const renderTweets = function (tweets) {
   $(".tweet-container").empty();
   for (const tweet of tweets) {
     $newTweet = createTweetElement(tweet);
@@ -59,13 +60,16 @@ const renderTweets = function(tweets) {
   }
 };
 
-const loadTweets = function(cb) {
-  $.ajax("/tweets", { method: "GET" }).then(function(tweets) {
+const loadTweets = function (cb) {
+  $.ajax("/tweets", {
+    method: "GET"
+  }).then(function (tweets) {
     cb(tweets);
   });
 };
 
-const toggleNewTweet = function(element) {
+// Toggle to hide/show the new tweet form
+const toggleNewTweet = function (element) {
   element.click(() => {
     const $newTweet = $(".new-tweet");
     if ($newTweet.hasClass("hidden")) {
@@ -80,8 +84,8 @@ const toggleNewTweet = function(element) {
   });
 };
 
-const submitTweet = function() {
-  $("#new-tweet-form").submit(function(event) {
+const submitTweet = function () {
+  $("#new-tweet-form").submit(function (event) {
     event.preventDefault();
 
     const $data = $(this).serialize();
@@ -89,6 +93,7 @@ const submitTweet = function() {
     const $emptyError = $(this).find(".empty-error");
     const $lengthError = $(this).find(".length-error");
 
+    // Control behaviour of error message(s)
     if ($emptyError.is(":hidden")) {
       if ($userTextInput.val() === "") {
         $emptyError.slideDown("slow").toggleClass("hidden");
@@ -117,16 +122,16 @@ const submitTweet = function() {
       url: "/tweets",
       type: "POST",
       data: $data,
-      success: function() {
+      success: function () {
         loadTweets(renderTweets);
-        $userTextInput.val("");
-        $(".counter").text("140");
+        $userTextInput.val(""); // Reset new tweet form
+        $(".counter").text("140"); // Reset character counter
       }
     });
   });
 };
 
-$(document).ready(function() {
+$(document).ready(function () {
   submitTweet();
   loadTweets(renderTweets);
   toggleNewTweet($(".write-tweet"));
